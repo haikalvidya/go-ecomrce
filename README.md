@@ -7,11 +7,12 @@ It's an API of simple ecommerce to CRUD product and add image of product based o
     `make run-app`
 2. Browse to localhost:7788/swagger/index.html.
 3. To get access to all feature product, you need to regist and login the account.
-4. After the login, copy a token from the response, then click "Authorize" and in a popup that opened, enter the value for "apiKey" in a form:
+4. After the login, copy a token from the response, then click "Authorize", enter the value for "apiKey" in a form:
 "Bearer {token}". For example:
 
-
-    Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1ODk0NDA5NjYsIm9yaWdfaWF0IjoxNTg5NDM5OTY2LCJ1c2VyX2lkIjo1fQ.f8dSG3NxFLHwyA5-XIYALT5GtXm4eiH-motqtqAUBOI 
+    ```
+      Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTYzNTU4NDMwNiwiZXhwIjoxNjM1NTg3OTA2fQ.s5hFizdpccvA6cM6p--RhiD81qUpn_typ3LwAJgPbVU
+    ```
 
    ![authorize button](./assets/authorize.png)
 Then, click "Authorize" and close the popup.
@@ -32,8 +33,10 @@ Then, click "Authorize" and close the popup.
 
 - **Language:** [Go](https://golang.org/)
 - **Framework:** [Echo](https://echo.labstack.com/)
+- **Authentication:** [jwt-Go](github.com/dgrijalva/jwt-go)
 - **Database:** [MySQL](https://www.mysql.com/)
 - **ORM:** [GORM](https://gorm.io/)
+- **Migration:** [Go-mirations](github.com/ShkrutDenis/go-migrations)
 - **Mock:** [Mocking db](https://github.com/selvatico/go-mocket)
 - **API Docs:** [Swagger](https://github.com/swaggo/echo-swagger)
 - **Container:** [Docker](https://www.docker.com/)
