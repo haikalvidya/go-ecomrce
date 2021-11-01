@@ -2,7 +2,7 @@ package routes
 
 import (
 	"fmt"
-	s "go-ecomrce/server"
+	"go-ecomrce/server"
 	"go-ecomrce/server/handlers"
 	"go-ecomrce/services/token"
 
@@ -10,7 +10,7 @@ import (
 	echoSwagger "github.com/swaggo/echo-swagger"
 )
 
-func ConfigureRoutes(server *s.Server) {
+func ConfigureRoutes(server *server.Server) {
 	productHandler := handlers.NewProductHandlers(server)
 	authHandler := handlers.NewAuthHandler(server)
 	registerHandler := handlers.NewRegisterHandler(server)
@@ -25,7 +25,7 @@ func ConfigureRoutes(server *s.Server) {
 
 	fmt.Println(server.Config.Auth.AccessSecret)
 
-	server.Echo.Use(middleware.Static("uploads"))
+	server.Echo.Static("/uploads", "uploads")
 
 	r := server.Echo.Group("/api/v1")
 	config := middleware.JWTConfig{

@@ -16,6 +16,7 @@ It's an API of simple ecommerce to CRUD product and add image of product based o
 
    ![authorize button](./assets/authorize.png)
 Then, click "Authorize" and close the popup.
+5. To see uploads image, go to path ```localhost:7788/uploads/{filename}```
 
 ## What's feature of this project:
 
